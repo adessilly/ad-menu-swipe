@@ -1,0 +1,34 @@
+
+.ad-menu-swipe-actions {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  display: inline-flex; /* make element size relative to content */
+  align-items: center;
+  text-align: center;
+}
+
+.ad-menu-swipe-actions-left {
+  justify-content: flex-start;
+}
+
+.ad-menu-swipe-actions-right {
+  justify-content: flex-end;
+}
+
+.ad-menu-swipe-action {
+  display: inline-block;
+  padding: 0px 20px;
+  font-size: 0.8em;
+  opacity: 0.2;
+  transition: all 0.2s ease-out;
+}
+
+.ad-menu-swipe-action-active {
+  font-size: 1.3em;
+  opacity: 1;
+}

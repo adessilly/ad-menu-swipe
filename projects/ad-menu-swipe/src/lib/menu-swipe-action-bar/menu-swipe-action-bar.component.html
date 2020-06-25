@@ -1,0 +1,15 @@
+<div
+class="ad-menu-swipe-actions"
+[class.ad-menu-swipe-actions-right]="alignRight"
+[class.ad-menu-swipe-actions-left]="!alignRight"
+ #actionsZone>
+  <ng-container *ngFor="let action of actions">
+    <ng-container *ngIf="action === activeAction || !animating">
+      <span
+        class="ad-menu-swipe-action"
+        [class.ad-menu-swipe-action-active]="action === activeAction" #actionsViews>
+        <i [class]="action.icon"></i>
+      </span>
+    </ng-container>
+  </ng-container>
+</div>

@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": []
           },
@@ -94,7 +95,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
@@ -120,6 +122,46 @@
             "production": {
               "devServerTarget": "ad-menu-swipe-project:serve:production"
             }
+          }
+        }
+      }
+    },
+    "ad-menu-swipe": {
+      "projectType": "library",
+      "root": "projects/ad-menu-swipe",
+      "sourceRoot": "projects/ad-menu-swipe/src",
+      "prefix": "ad",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ad-menu-swipe/tsconfig.lib.json",
+            "project": "projects/ad-menu-swipe/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ad-menu-swipe/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ad-menu-swipe/src/test.ts",
+            "tsConfig": "projects/ad-menu-swipe/tsconfig.spec.json",
+            "karmaConfig": "projects/ad-menu-swipe/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ad-menu-swipe/tsconfig.lib.json",
+              "projects/ad-menu-swipe/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

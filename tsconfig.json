@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ad-menu-swipe": [
+        "dist/ad-menu-swipe/ad-menu-swipe",
+        "dist/ad-menu-swipe"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -1,0 +1,32 @@
+<div class="ad-menu-swipe-container">
+
+  <div
+    class="ad-menu-swipe-box"
+    [class.ad-menu-swipe-animate]="!panMoving"
+    [class.ad-menu-swipe-opened-left]="selectedAnimatingLeft"
+    [class.ad-menu-swipe-opened-right]="selectedAnimatingRight"
+    (panstart)="askPanStart($event)"
+    (panend)="askPanEnd($event)"
+    (pan)="askPan($event)"
+    data-mc-options='{"touchAction": "pan-x"}'
+    [style.transform]="'translate3d('+deltaX+'px, 0px, 0)'"
+    [style.border-radius]="borderRadius+'px'">
+    <ng-content></ng-content>
+  </div>
+
+  <ad-menu-swipe-action-bar
+    (selected)="askSelected($event)"
+    [deltaX]="deltaX"
+    [actions]="actionsLeft"
+    [animating]="selectedAnimatingRight || selectedAnimatingLeft">
+  </ad-menu-swipe-action-bar>
+
+  <ad-menu-swipe-action-bar
+    (selected)="askSelected($event)"
+    [alignRight]="true"
+    [deltaX]="deltaX"
+    [actions]="actionsRight"
+    [animating]="selectedAnimatingRight || selectedAnimatingLeft">
+  </ad-menu-swipe-action-bar>
+
+</div>

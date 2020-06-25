@@ -1,0 +1,28 @@
+.ad-menu-swipe-box {
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-x pan-y !important;
+}
+
+.ad-menu-swipe-animate {
+  transition: all 0.2s ease-out;
+}
+
+.ad-menu-swipe-box.ad-menu-swipe-opened-left {
+  transform: translate3d(100%, 0px, 0) !important;
+}
+.ad-menu-swipe-box.ad-menu-swipe-opened-right {
+  transform: translate3d(-100%, 0px, 0) !important;
+}
+
+.ad-menu-swipe-container {
+  overflow: auto;
+  background: #efefef;
+  position: relative;
+  touch-action: pan-y !important;
+}
+
+
