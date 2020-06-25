@@ -65,11 +65,11 @@ export class MenuSwipeActionBarComponent implements AfterViewInit, OnChanges {
       const isActive = this.deltaX > activationLimit;
       if (isActive) {
         this.activeAction = action;
-        if (action !== oldActiveAction) {
-          this.selected.emit(action);
-        }
         break;
       }
+    }
+    if (this.activeAction !== oldActiveAction) {
+      this.selected.emit(this.activeAction);
     }
   }
 
@@ -93,6 +93,9 @@ export class MenuSwipeActionBarComponent implements AfterViewInit, OnChanges {
         }
         break;
       }
+    }
+    if (this.activeAction !== oldActiveAction) {
+      this.selected.emit(this.activeAction);
     }
   }
 

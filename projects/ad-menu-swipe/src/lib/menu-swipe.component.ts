@@ -64,6 +64,9 @@ export class MenuSwipeComponent implements OnInit {
     // Only enable pan if it is an horizontal direction
     // Because vertical direction means it is a scrolling move.
     this.panMoving = !this.isScrolling(event);
+    if (this.panMoving) {
+      this.currentAction = null;
+    }
   }
 
   askPanEnd(event: any) {
