@@ -5,6 +5,7 @@
     [class.ad-menu-swipe-animate]="!panMoving"
     [class.ad-menu-swipe-opened-left]="selectedAnimatingLeft"
     [class.ad-menu-swipe-opened-right]="selectedAnimatingRight"
+    (tap)="askTap($event)"
     (panstart)="askPanStart($event)"
     (panend)="askPanEnd($event)"
     (pan)="askPan($event)"

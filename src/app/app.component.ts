@@ -23,4 +23,8 @@ export class AppComponent {
     this.lastSwipeIndex = index;
   }
 
+  menuTap() {
+    console.log('click');
+  }
+
 }

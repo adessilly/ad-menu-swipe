@@ -39,6 +39,9 @@ Parameters supported by this object:
 ### Events
 
 - `actionSwiped`: SwipeAction; - the action swiped
+- `menuTap`: void; - event when tap on the menu (to use instead of click)
+- `swipeStart`: void; - event triggered when swipe starts
+- `swipeEnd`: void; - event triggered when swipe ends
 
 ## Example
 
