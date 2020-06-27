@@ -17,6 +17,7 @@ export class MenuSwipeComponent implements OnInit {
 
   @Input() actionsLeft = [];
   @Input() actionsRight = [];
+  @Input() disabled = false;
   @Output() actionSwiped: EventEmitter<SwipeAction> = new EventEmitter<SwipeAction>();
   @Output() menuTap: EventEmitter<any> = new EventEmitter<any>();
 
@@ -65,10 +66,16 @@ export class MenuSwipeComponent implements OnInit {
   }
 
   askTap(event: any) {
+    if (this.disabled) {
+      return;
+    }
     this.menuTap.emit();
   }
 
   askPanStart(event: any) {
+    if (this.disabled) {
+      return;
+    }
     // Only enable pan if it is an horizontal direction
     // Because vertical direction means it is a scrolling move.
     this.panMoving = !this.isScrolling(event);

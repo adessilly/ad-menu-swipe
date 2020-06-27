@@ -35,6 +35,7 @@ Parameters supported by this object:
 
 - `actionsLeft`: SwipeAction[]; - Array of icons actions to put to the left
 - `actionsRight`: SwipeAction[]; - Array of icons actions to put to the right
+- `disabled`: boolean (default: false) - disable swip and tap
 
 ### Events
 
