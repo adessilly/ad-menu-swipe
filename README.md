@@ -3,7 +3,7 @@
 
 Swipe a component to the left or to the right to select actions behinds.
 
-<iframe src="https://stackblitz.com/edit/ad-library?embed=1&file=src/app/app.component.html&hideExplorer=1&hideNavigation=1&view=preview" style="width:100%;height:330px;border:none;"></iframe>
+<iframe src="https://stackblitz.com/edit/ad-menu-swipe?file=src%2Fapp%2Fapp.component.html&hideExplorer=1&hideNavigation=1&view=preview" style="width:100%;height:330px;border:none;"></iframe>
 
 ## Using ***ad-menu-swipe*** in a project
 
@@ -46,7 +46,7 @@ Parameters supported by this object:
 
 ## Example
 
-<iframe src="https://stackblitz.com/edit/menu-swipe?file=src%2Fapp%2Fapp.component.html&hideNavigation=1&view=preview" style="width:100%;height:400px;border:none;"></iframe>
+<iframe src="https://stackblitz.com/edit/ad-menu-swipe?file=src%2Fapp%2Fapp.component.html&hideNavigation=1&view=preview" style="width:100%;height:400px;border:none;"></iframe>
 
 ## Test library
 
