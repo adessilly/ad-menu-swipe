@@ -19,10 +19,23 @@
 }
 
 .ad-menu-swipe-container {
-  overflow: auto;
+  overflow: auto; /* overflow: hidden will cause somme issues with hammerjs swipe and scroll */
   background: #efefef;
   position: relative;
   touch-action: pan-y !important;
 }
 
-
+/* Make scroll invisible without using overflow:hidden */
+.ad-menu-swipe-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.ad-menu-swipe-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ad-menu-swipe-container::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.ad-menu-swipe-container::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
