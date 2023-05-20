@@ -15,8 +15,8 @@ export class MenuSwipeComponent implements OnInit {
   selectedAnimatingLeft = false;
   selectedAnimatingRight = false;
 
-  @Input() actionsLeft = [];
-  @Input() actionsRight = [];
+  @Input() actionsLeft: SwipeAction[] = [];
+  @Input() actionsRight: SwipeAction[] = [];
   @Input() disabled = false;
   @Output() actionSwiped: EventEmitter<SwipeAction> = new EventEmitter<SwipeAction>();
   @Output() menuTap: EventEmitter<any> = new EventEmitter<any>();
@@ -27,7 +27,7 @@ export class MenuSwipeComponent implements OnInit {
   stateActionsLeft = [];
   stateActionsRight = [];
 
-  currentAction = null;
+  currentAction: SwipeAction | null = null;
 
   constructor() { }
 
@@ -90,7 +90,7 @@ export class MenuSwipeComponent implements OnInit {
     this.swipeEnd.emit();
     this.deltaX = 0;
 
-    if (this.hasSelectedSomethingLeft()) {
+    if (this.hasSelectedSomethingLeft() && this.currentAction) {
       this.selectedAnimatingLeft = true;
       this.actionSwiped.emit(this.currentAction);
       setTimeout(() => {
@@ -98,7 +98,7 @@ export class MenuSwipeComponent implements OnInit {
       }, 1000);
     }
 
-    if (this.hasSelectedSomethingRight()) {
+    if (this.hasSelectedSomethingRight() && this.currentAction) {
       this.selectedAnimatingRight = true;
       this.actionSwiped.emit(this.currentAction);
       setTimeout(() => {

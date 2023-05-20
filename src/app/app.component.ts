@@ -10,13 +10,13 @@ import { FakeData } from './fake-data';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
 
-  actionsLeft = [ { icon: 'fas fa-archive' }, { icon: 'fas fa-trash' }, { icon: 'fas fa-star' } ];
-  actionsRight = [ { icon: 'fas fa-reply-all' }, { icon: 'fas fa-reply' } ];
+  actionsLeft = [ { icon: 'fa-solid fa-archive' }, { icon: 'fa-solid fa-trash' }, { icon: 'fa-solid fa-star' } ];
+  actionsRight = [ { icon: 'fa-solid fa-reply-all' }, { icon: 'fa-solid fa-reply' } ];
 
   mails = FakeData.mails;
 
-  lastSwipeAction: SwipeAction;
-  lastSwipeIndex: number;
+  lastSwipeAction!: SwipeAction;
+  lastSwipeIndex!: number;
 
   actionSwiped(action: SwipeAction, index: number) {
     this.lastSwipeAction = action;

@@ -1,60 +1,27 @@
-# AD Menu Swipe
-[website](https://adessilly.github.io/ad-menu-swipe/)
+# AdMenuSwipeProject
 
-Swipe a component to the left or to the right to select actions behinds.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
-<iframe src="https://ad-menu-swipe.stackblitz.io" style="width:100%;height:1200px;border:none;"></iframe>
+## Development server
 
-## Using ***ad-menu-swipe*** in a project
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-1. Install the library and hammerjs : 
-`npm i hammerjs ad-menu-swipe`
-2. Import the module : 
-```
-import { AdMenuSwipeModule } from 'ad-menu-swipe';
-@NgModule({
-imports: [ ..., AdMenuSwipeModule ], ...
-```
+## Code scaffolding
 
-```
-    <ad-menu-swipe
-      (actionSwiped)="actionSwiped($event)"
-      [actionsLeft]="actionsLeft"
-      [actionsRight]="actionsRight">
-      <!-- HTML here -->
-    </ad-menu-swipe>
-```
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Component
+## Build
 
-- `ad-menu-swipe` - (`MenuSwipeComponent`)
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-### Properties
+## Running unit tests
 
-Parameters supported by this object:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-- `actionsLeft`: SwipeAction[]; - Array of icons actions to put to the left
-- `actionsRight`: SwipeAction[]; - Array of icons actions to put to the right
-- `disabled`: boolean (default: false) - disable swip and tap
+## Running end-to-end tests
 
-### Events
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-- `actionSwiped`: SwipeAction; - the action swiped
-- `menuTap`: void; - event when tap on the menu (to use instead of click)
-- `swipeStart`: void; - event triggered when swipe starts
-- `swipeEnd`: void; - event triggered when swipe ends
+## Further help
 
-## Example
-
-<iframe src="https://stackblitz.com/edit/ad-menu-swipe?embed=1&file=src/app/app.component.html&hideExplorer=1&hideNavigation=1" style="width:100%;height:400px;border:none;"></iframe>
-
-## Test library
-
-clone this project and run 'npm i && npm start'
-
-## License
-
-MIT License
-
-## Author
-Adrien Dessilly
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -14,15 +14,15 @@ import {
 })
 export class MenuSwipeActionBarComponent implements AfterViewInit, OnChanges {
 
-  @Input() actions;
+  @Input() actions: any;
   @Input() deltaX = 0;
   @Input() alignRight = false;
   @Input() animating = false;
 
   @Output() selected: EventEmitter<any> = new EventEmitter();
 
-  @ViewChild('actionsZone') actionsZone: ElementRef;
-  @ViewChildren('actionsViews') actionsViews: QueryList<ElementRef>;
+  @ViewChild('actionsZone') actionsZone!: ElementRef;
+  @ViewChildren('actionsViews') actionsViews!: QueryList<ElementRef>;
 
   activeAction = null;
 
@@ -35,7 +35,7 @@ export class MenuSwipeActionBarComponent implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (this.viewLoaded && (changes.actions || changes.deltaX) ) {
+    if (this.viewLoaded && (changes['actions'] || changes['deltaX']) ) {
       this.checkSelectedAction();
     }
   }

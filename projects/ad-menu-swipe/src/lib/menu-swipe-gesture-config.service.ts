@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class MenuSwipeGestureConfig extends HammerGestureConfig {
 
 
-  overrides = {
+  override overrides = {
     pan: { direction: Hammer.DIRECTION_ALL }
   };
 
