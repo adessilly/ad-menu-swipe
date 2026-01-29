@@ -5,39 +5,34 @@
 
 <p>
   Last swipe action :
-  <strong *ngIf="lastSwipeAction">
-  [{{ lastSwipeAction.icon }}]&nbsp;on index
-  [{{ lastSwipeIndex }}]
-  </strong>
+  @if (lastSwipeAction) {
+    <strong>
+      [{{ lastSwipeAction.icon }}]&nbsp;on index
+      [{{ lastSwipeIndex }}]
+    </strong>
+  }
 </p>
 
 <div style="touch-action: none !important;">
 
-  <ng-container *ngFor="let mail of mails; let index = index;">
-
+  @for (mail of mails; track mail; let index = $index) {
     <ad-menu-swipe
       (actionSwiped)="actionSwiped($event, index)"
       (menuTap)="menuTap()"
       [actionsLeft]="actionsLeft"
       [actionsRight]="actionsRight">
-
       <div class="list-elem">
-
         <div class="list-elem-icon">
           <i class="fas fa-envelope"></i>
         </div>
-
         <div class="list-elem-title">{{ mail.author }}</div>
         <div class="list-elem-title2">{{ mail.title }}</div>
         <div class="list-elem-message">
-            {{ mail.message }}
+          {{ mail.message }}
         </div>
         <div class="list-elem-date">{{ mail.date }}</div>
-
       </div>
-
     </ad-menu-swipe>
-
-  </ng-container>
+  }
 
 </div>
