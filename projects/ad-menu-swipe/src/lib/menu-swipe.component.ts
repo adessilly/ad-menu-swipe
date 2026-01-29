@@ -2,9 +2,10 @@ import { Component, OnInit, ViewChildren, QueryList, ElementRef, ViewChild, Inpu
 import { SwipeAction } from './shared/models/swipe-action';
 
 @Component({
-  selector: 'ad-menu-swipe',
-  templateUrl: './menu-swipe.component.html',
-  styleUrls: ['./menu-swipe.component.scss']
+    selector: 'ad-menu-swipe',
+    templateUrl: './menu-swipe.component.html',
+    styleUrls: ['./menu-swipe.component.scss'],
+    standalone: false
 })
 export class MenuSwipeComponent implements OnInit {
 

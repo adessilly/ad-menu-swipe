@@ -8,9 +8,10 @@ import {
   EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'ad-menu-swipe-action-bar',
-  templateUrl: './menu-swipe-action-bar.component.html',
-  styleUrls: ['./menu-swipe-action-bar.component.scss']
+    selector: 'ad-menu-swipe-action-bar',
+    templateUrl: './menu-swipe-action-bar.component.html',
+    styleUrls: ['./menu-swipe-action-bar.component.scss'],
+    standalone: false
 })
 export class MenuSwipeActionBarComponent implements AfterViewInit, OnChanges {
 

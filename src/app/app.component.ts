@@ -3,9 +3,10 @@ import { SwipeAction } from 'projects/ad-menu-swipe/src/lib/shared/models/swipe-
 import { FakeData } from './fake-data';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
